@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+body{
+  background-color: #394057;
+}
+/*Estilos del header*/
+header {
+  background: -webkit-linear-gradient(top,rgba(129, 51, 112,0.5) 30%,rgba(138, 59, 131,0.3) 70%);
+  height: 15vh;
+  padding: 5px 20px;
+  box-shadow: 2px 2px 2px #2b332b;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+}
+h1 {
+  font-size: 2.5em;
+}
+
+/*menu de opciones nav*/
+#menu-nav {
+  background-color: rgb(42, 52, 107);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+#menu-nav > a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/*dropdown del nav*/
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+#menu-nav > a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  border-bottom:solid white 2px ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/*boton save*/
+.save-disabled{
+  background: #8D8D8D;
+  text-decoration: underline;
+}
+.save-disabled:hover{
+  background: #8D8D8D !important;
+}
+/*Editor de texto compilador*/
+
+main {
+  padding: 10px 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.textAreaContainer{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.editor {
+  margin-top: 10px;
+  resize: none;
+  width: 550px;
+  height: 56vh;
+  border: none;
+  font-size: 20px;
+  background: rgb(50, 56, 90);
+  color:white;
+}
+
+/*boton de compilar*/
+
+#compileButton {
+  margin-top: 15px;
+  background: #84c318;
+  color: #f5fbef;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+#compileButton:hover {
+  background: #f5fbef;
+  color: #84c318;
+}
+#compileButton:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 6px;
+  width: 0;
+  background: #84c318;
+  transition: 400ms ease all;
+}
+#compileButton:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+#compileButton:hover:before,
+#compileButton:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/*Seleccionar archivo*/
+.seleccionarArchivo{
+  display: none;
+  position: absolute;
+  top: 10%;
+  left:5%;
+  width: 90%;
+  height: 80vh;
+  background: gray;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgba(0,0,0,0.6);
+  z-index: 2;
+}
+.seleccionarArchivo > h2{
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+  border-radius:3px 3px 0 0;
+  background: #666;
+  color: #f5fbef;
+  text-shadow: 1px 1px 2px black;
+}
+
+#files{
+  margin-bottom: 15px; 
+  font-size: 15px;
+  border:none;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inputFileWrapper{
+  width:100%;
+  height:60vh;
+  padding: 15px;
+  border: 5px solid black;
+}
+
+.show {
+  display: block;
+}
+.dessapear{
+  display: none;
+}
+.modal{
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  color: tomato;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.modal pre h1{
+  color: gray;
+  font-style: italic;
+}
+.modal pre{
+  padding: 100px;
+  background: white;
+  font-weight: 550;
+}
