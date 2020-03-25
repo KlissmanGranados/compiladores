@@ -116,7 +116,7 @@ main {
 
 #compileButton {
   margin-top: 15px;
-  background: #84c318;
+  background: #000000;
   color: #f5fbef;
   border: none;
   position: relative;
@@ -129,7 +129,7 @@ main {
 }
 #compileButton:hover {
   background: #f5fbef;
-  color: #84c318;
+  color: #000000;
 }
 #compileButton:before,
 button:after {
@@ -139,7 +139,7 @@ button:after {
   right: 0;
   height: 6px;
   width: 0;
-  background: #84c318;
+  background: #656662;
   transition: 400ms ease all;
 }
 #compileButton:after {
